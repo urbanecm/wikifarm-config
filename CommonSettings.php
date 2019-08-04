@@ -104,3 +104,4 @@ wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'GlobalBlocking' );
 $wgGlobalBlockingDatabase = "centralauth";
 wfLoadExtension( 'AbuseFilter' );
+wfLoadExtension( 'CheckUser' );
