@@ -72,7 +72,6 @@ $wgPasswordSender = "devwiki@martin.urbanec.cz";
 // Misc common things
 $wgShowExceptionDetails = true;
 $wgDebugLogFile = "/var/www/wikis/logs/debug-{$wgDBname}.log";
-$wgJobRunRate = 0;
 
 // load skin
 wfLoadSkin( 'Vector' );
