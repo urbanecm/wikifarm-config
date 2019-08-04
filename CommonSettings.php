@@ -72,6 +72,11 @@ $wgPasswordSender = "devwiki@martin.urbanec.cz";
 // Misc common things
 $wgShowExceptionDetails = true;
 $wgDebugLogFile = "/var/www/wikis/logs/debug-{$wgDBname}.log";
+$wgGroupPermissions['sysop']['deletelogentry'] = true;
+$wgGroupPermissions['sysop']['deleterevision'] = true;
+$wgGroupPermissions['oversight']['suppressrevision'] = true;
+$wgGroupPermissions['oversight']['suppressionlog'] = true;
+$wgGroupPermissions['oversight']['hideuser'] = true;
 
 // load skin
 wfLoadSkin( 'Vector' );
