@@ -104,3 +104,4 @@ foreach ( $groupOverrides as $group => $permissions ) {
 wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'GlobalBlocking' );
 $wgGlobalBlockingDatabase = "centralauth";
+wfLoadExtension( 'AbuseFilter' );
