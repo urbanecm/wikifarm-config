@@ -26,7 +26,6 @@ $wgConf->settings = [
     ],
     'wgLanguageCode' => [
         'default' => 'en',
-        'bwiki' => 'cs',
     ],
     'groupOverrides2' => [
         'default' => [
