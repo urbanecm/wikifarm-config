@@ -84,6 +84,7 @@ wfLoadSkin( 'Vector' );
 // We're a family - CentralAuth
 wfLoadExtension( 'CentralAuth' );
 $wgCentralAuthEnableGlobalRenameRequest = true;
+$wgGlobalRenameBlacklist = "http://a.wikifarm/mw/index.php?title=Rename_blacklist&action=raw";
 
 // Renameuser
 wfLoadExtension( 'Renameuser' );
