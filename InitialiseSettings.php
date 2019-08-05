@@ -54,6 +54,11 @@ $wgConf->settings = [
         ]
     ],
     'groupOverrides' => [
-        'default' => []
+        'default' => [],
+        'awiki' => [
+            'global-renamer' => [
+                'centralauth-rename' => true,
+            ]
+        ]
     ],
 ];
