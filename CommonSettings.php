@@ -85,6 +85,7 @@ wfLoadSkin( 'Vector' );
 wfLoadExtension( 'CentralAuth' );
 $wgCentralAuthEnableGlobalRenameRequest = true;
 $wgGlobalRenameBlacklist = "http://a.wikifarm/mw/index.php?title=Rename_blacklist&action=raw";
+$wgGlobalRenameBlacklistRegex = true;
 
 // Renameuser
 wfLoadExtension( 'Renameuser' );
