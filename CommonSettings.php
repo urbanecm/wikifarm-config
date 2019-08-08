@@ -13,7 +13,7 @@ if ( defined( 'MW_DB' ) ) {
         if ( preg_match( '/^(.*)\.wikifarm$/', $server, $matches ) ) {
             $wikiname = $matches[1];
         } else {
-            die( "Invalid host name, can't determine wiki name" );
+            die( "Invalid host name, can't determine wiki name\n" );
         }
     }
     /*if ( $wikiname === "www" ) {
