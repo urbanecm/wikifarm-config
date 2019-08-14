@@ -112,4 +112,5 @@ wfLoadExtension( 'GlobalBlocking' );
 $wgGlobalBlockingDatabase = "centralauth";
 wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
+wfLoadExtension( 'Echo' );
 require "growth.php";
