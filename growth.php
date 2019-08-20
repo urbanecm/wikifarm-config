@@ -22,3 +22,9 @@ $wgGEHelpPanelLinks = [
 $wgGEHelpPanelSearchEnabled = true;
 // Email confirmation changes
 $wgGEConfirmEmailEnabled = true;
+
+
+// Stuff for T228212
+$wgGEOutreachDashboardCampaigns = [
+    "https://outreachdashboard.wmflabs.org/campaigns/studenti/users.json"
+];
