@@ -1,5 +1,4 @@
 <?php
-
 # Switching stuff
 if ( defined( 'MW_DB' ) ) {
     // Command-line mode and maintenance scripts (e.g. update.php) 
@@ -117,7 +116,7 @@ wfLoadExtension( 'Echo' );
 require "growth.php";
 
 # Must be at the end
-
+$wgCdnServersNoPurge[] = '127.0.0.0/8';
 $server = $_SERVER['SERVER_NAME'];
 if ( preg_match( '/^(.*)\.ngrok.io$/', $server, $matches ) ) {
     $wgServer = 'http://' . $matches[1] . '.ngrok.io';
