@@ -9,12 +9,13 @@ if ( defined( 'MW_DB' ) ) {
     $server = $_SERVER['SERVER_NAME'];
     if ( preg_match( '/^(.*)\.localhost$/', $server, $matches ) ) {
         $wikiname = $matches[1];
-    } else {
-        if ( preg_match( '/^(.*)\.wikifarm$/', $server, $matches ) ) {
+    } elseif ( preg_match( '/^(.*)\.wikifarm$/', $server, $matches ) ) {
             $wikiname = $matches[1];
-        } else {
-            die( "Invalid host name, can't determine wiki name\n" );
-        }
+    } elseif ( preg_match( '/^(.*)\.ngrok.io$/', $server, $matches ) ) {
+            $wikiname = 'a';
+    }
+    else {
+        die( "Invalid host name, can't determine wiki name\n" );
     }
     /*if ( $wikiname === "www" ) {
         // Optional: Override database name of your "main" wiki (otherwise "wwwwiki")
@@ -114,3 +115,10 @@ wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Echo' );
 require "growth.php";
+
+# Must be at the end
+
+$server = $_SERVER['SERVER_NAME'];
+if ( preg_match( '/^(.*)\.ngrok.io$/', $server, $matches ) ) {
+    $wgServer = 'http://' . $matches[1] . '.ngrok.io';
+}
