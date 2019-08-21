@@ -117,6 +117,7 @@ require "growth.php";
 
 # Must be at the end
 $wgCdnServersNoPurge[] = '127.0.0.0/8';
+$wgEnableDnsBlacklist = true;
 $server = $_SERVER['SERVER_NAME'];
 if ( preg_match( '/^(.*)\.ngrok.io$/', $server, $matches ) ) {
     $wgServer = 'http://' . $matches[1] . '.ngrok.io';
