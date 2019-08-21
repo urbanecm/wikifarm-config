@@ -12,6 +12,7 @@ if ( defined( 'MW_DB' ) ) {
             $wikiname = $matches[1];
     } elseif ( preg_match( '/^(.*)\.ngrok.io$/', $server, $matches ) ) {
             $wikiname = 'a';
+            $wmgServer = 'https://' . $matches[1] . '.ngrok.io';
     }
     else {
         die( "Invalid host name, can't determine wiki name\n" );
@@ -118,7 +119,6 @@ require "growth.php";
 # Must be at the end
 $wgCdnServersNoPurge[] = '127.0.0.0/8';
 $wgEnableDnsBlacklist = true;
-$server = $_SERVER['SERVER_NAME'];
-if ( preg_match( '/^(.*)\.ngrok.io$/', $server, $matches ) ) {
-    $wgServer = 'http://' . $matches[1] . '.ngrok.io';
+if ( isset($wmgServer) ) {
+    $wgServer = $wmgServer; // Must be here, to override IS.php
 }
