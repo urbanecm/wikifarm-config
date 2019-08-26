@@ -31,6 +31,10 @@ $wgConf->settings = [
         'default' => false,
         'flaggedrevswiki' => true,
     ],
+    'wgEnablePartialBlocks' => [
+        'default' => false,
+        'flaggedrevswiki' => true,
+    ],
     'groupOverrides2' => [
         'default' => [
             'sysop' => [
