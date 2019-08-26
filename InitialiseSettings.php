@@ -15,11 +15,13 @@ $wgConf->settings = [
         'awiki' => 'http://a.wikifarm',
         'bwiki' => 'http://b.wikifarm',
         'cwiki' => 'http://c.wikifarm',
+        'flaggedrevswiki' => 'http://flaggedrevs.wikifarm',
     ],
     'wgCanonicalServer' => [
         'awiki' => 'http://a.wikifarm',
         'bwiki' => 'http://b.wikifarm',
         'cwiki' => 'http://c.wikifarm',
+        'flaggedrevswiki' => 'http://flaggedrevs.wikifarm',
     ],
     'wgDefaultSkin' => [
         'default' => 'vector',
