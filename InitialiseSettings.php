@@ -27,6 +27,10 @@ $wgConf->settings = [
     'wgLanguageCode' => [
         'default' => 'en',
     ],
+    'wmgUseFlaggedRevs' => [
+        'default' => false,
+        'flaggedrevswiki' => true,
+    ],
     'groupOverrides2' => [
         'default' => [
             'sysop' => [

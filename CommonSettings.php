@@ -107,7 +107,7 @@ foreach ( $groupOverrides as $group => $permissions ) {
 	$wgGroupPermissions[$group] = $permissions + $wgGroupPermissions[$group];
 }
 
-// Another extensions
+// Extensions enabled on all wikis
 wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'GlobalBlocking' );
 $wgGlobalBlockingDatabase = "centralauth";
@@ -115,6 +115,11 @@ wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Echo' );
 require "growth.php";
+
+// Per wiki extension stuff
+if ( $wmgUseFlaggedRevs ) {
+    require "flaggedrevs.php";
+}
 
 # Must be at the end
 $wgCdnServersNoPurge[] = '127.0.0.0/8';
