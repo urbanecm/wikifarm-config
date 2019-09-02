@@ -47,12 +47,12 @@ $confParams = [
     'site'    => $site,
 ];
 $dblists = [];
-/*foreach (["private", "separate", "fishbowl"] as $dblist) {
+foreach (["wikibaserepo"] as $dblist) {
     $wikis = DBLists::readDbListFile( $dblist );
     if ( in_array( $wgDBname, $wikis ) ) {
         $dblists[] = $dblist;
     }
-}*/
+}
 $globals = $wgConf->getAll( $wgDBname, "wiki", $confParams, $dblists );
 extract( $globals );
 $wgLocalDatabases =& $wgConf->getLocalDatabases();
@@ -212,6 +212,39 @@ if ( $wmgUseUploadWizard ) {
 		$wgUploadWizardConfig['wikibase']['enabled'] = true;
 		$wgUploadWizardConfig['wikibase']['statements'] = $wmgMediaInfoEnableUploadWizardStatements;
 	}
+}
+
+# Wikibase
+if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) {
+	include "Wikibase.php";
+}
+
+# USL
+if ( $wmgUseUniversalLanguageSelector ) {
+	wfLoadExtension( 'UniversalLanguageSelector' );
+	$wgULSGeoService = false;
+	$wgULSAnonCanChangeLanguage = false;
+	$wgULSPosition = $wmgULSPosition;
+	$wgULSIMEEnabled = $wmgULSIMEEnabled;
+	$wgULSWebfontsEnabled = $wmgULSWebfontsEnabled;
+	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
+		$wgULSNoImeSelectors[] = '.ace_editor textarea';
+	}
+	if ( $wmgUseTranslate && $wmgULSPosition === 'personal' ) {
+		$wgTranslatePageTranslationULS = true;
+	}
+
+	$wgULSEventLogging = true;
+
+	// Compact Language Links …
+
+	// … as a beta feature (see T136677 for beta to stable)
+	$wgULSCompactLanguageLinksBetaFeature = $wmgULSCompactLanguageLinksBetaFeature;
+
+	// … as a stable feature
+	$wgULSCompactLinksEnableAnon = $wmgULSCompactLinksEnableAnon;
+	$wgULSCompactLinksForNewAccounts = $wmgULSCompactLinksForNewAccounts;
+	$wgDefaultUserOptions['compact-language-links'] = 1;
 }
 
 # Must be at the end

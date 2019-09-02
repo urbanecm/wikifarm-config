@@ -56,6 +56,17 @@ $wgConf->settings = [
         'default' => false,
         'flaggedrevswiki' => true,
     ],
+    'wmgUseWikibaseRepo' => [
+        'default' => false,
+        'wikibaserepo' => true,
+    ],
+    'wmgUseUniversalLanguageSelector' => [
+        'default' => true,
+    ],
+    'wmgUseWikibaseCirrusSearch' => [
+        'default' => false,
+        'commonswiki' => true,
+    ],
     'groupOverrides2' => [
         'default' => [
             'sysop' => [
