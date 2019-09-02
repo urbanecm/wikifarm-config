@@ -16,12 +16,14 @@ $wgConf->settings = [
         'bwiki' => 'http://b.wikifarm',
         'cwiki' => 'http://c.wikifarm',
         'flaggedrevswiki' => 'http://flaggedrevs.wikifarm',
+        'commonswiki' => 'http://commons.wikifarm',
     ],
     'wgCanonicalServer' => [
         'awiki' => 'http://a.wikifarm',
         'bwiki' => 'http://b.wikifarm',
         'cwiki' => 'http://c.wikifarm',
         'flaggedrevswiki' => 'http://flaggedrevs.wikifarm',
+        'commonswiki' => 'http://commons.wikifarm',
     ],
     'wgDefaultSkin' => [
         'default' => 'vector',
@@ -32,6 +34,14 @@ $wgConf->settings = [
     'wmgUseFlaggedRevs' => [
         'default' => false,
         'flaggedrevswiki' => true,
+    ],
+    'wmgUseUploadWizard' => [
+        'default' => false,
+        'commonswiki' => true,
+    ],
+    'wmgUseWikibaseMediaInfo' => [
+        'default' => false,
+        'commonswiki' => true,
     ],
     'wgEnablePartialBlocks' => [
         'default' => false,
