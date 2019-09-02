@@ -35,6 +35,9 @@ $wgConf->settings = [
         'default' => false,
         'flaggedrevswiki' => true,
     ],
+    'wmgAltUploadForm' => [ // T35513
+        'default' => 'Special:Upload',
+    ],
     'wmgUseUploadWizard' => [
         'default' => false,
         'commonswiki' => true,
