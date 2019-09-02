@@ -35,6 +35,9 @@ $wgConf->settings = [
         'default' => false,
         'flaggedrevswiki' => true,
     ],
+    'wgUseInstantCommons' => [
+        'default' => true,
+    ],
     'wgEnableUploads' => [
         'default' => true,
     ],
