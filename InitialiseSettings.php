@@ -58,7 +58,7 @@ $wgConf->settings = [
     ],
     'wmgUseWikibaseRepo' => [
         'default' => false,
-        'wikibaserepo' => true,
+        'wikibaserepo' => false,
     ],
     'wmgUseUniversalLanguageSelector' => [
         'default' => true,
