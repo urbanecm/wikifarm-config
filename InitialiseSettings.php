@@ -48,24 +48,10 @@ $wgConf->settings = [
         'default' => false,
         'commonswiki' => true,
     ],
-    'wmgUseWikibaseMediaInfo' => [
-        'default' => false,
-        'commonswiki' => true,
-    ],
+
     'wgEnablePartialBlocks' => [
         'default' => false,
         'flaggedrevswiki' => true,
-    ],
-    'wmgUseWikibaseRepo' => [
-        'default' => false,
-        'wikibaserepo' => false,
-    ],
-    'wmgUseUniversalLanguageSelector' => [
-        'default' => true,
-    ],
-    'wmgUseWikibaseCirrusSearch' => [
-        'default' => false,
-        'commonswiki' => true,
     ],
     'groupOverrides2' => [
         'default' => [
