@@ -47,7 +47,7 @@ $confParams = [
     'site'    => $site,
 ];
 $dblists = [];
-foreach ([] as $dblist) {
+foreach (['closed'] as $dblist) {
     $wikis = DBLists::readDbListFile( $dblist );
     if ( in_array( $wgDBname, $wikis ) ) {
         $dblists[] = $dblist;

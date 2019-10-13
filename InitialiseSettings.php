@@ -77,7 +77,47 @@ $wgConf->settings = [
                 'centralauth-unmerge' => true,
                 'globalblock' => true,
             ],
-        ]
+        ],
+        // Read-only (except stewards)
+        'closed' => [
+            '*' => [
+                'edit' => false,
+                'createaccount' => false,
+            ],
+            'user' => [
+                'edit' => false,
+                'move' => false,
+                'move-rootuserpages' => false,
+                'move-subpages' => false,
+                'upload' => false,
+            ],
+            'autoconfirmed' => [
+                'upload' => false,
+                'move' => false,
+            ],
+            'sysop' => [
+                'block' => false,
+                'delete' => false,
+                'undelete' => false,
+                'import' => false,
+                'move' => false,
+                'move-subpages' => false,
+                'move-rootuserpages' => false,
+                'patrol' => false,
+                'protect' => false,
+                'editprotected' => false,
+                'rollback' => false,
+                'trackback' => false,
+                'upload' => false,
+                'movefile' => false,
+            ],
+            'steward' => [
+                'edit' => true,
+                'move' => true,
+                'delete' => true,
+                'upload' => true,
+            ],
+        ],
     ],
     'groupOverrides' => [
         'default' => [],
