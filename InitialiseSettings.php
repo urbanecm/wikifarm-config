@@ -83,6 +83,7 @@ $wgConf->settings = [
             '*' => [
                 'edit' => false,
                 'createaccount' => false,
+                'autocreateaccount' => true,
             ],
             'user' => [
                 'edit' => false,
