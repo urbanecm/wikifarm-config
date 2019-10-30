@@ -121,36 +121,6 @@ if ( $wmgUseFlaggedRevs ) {
     require "flaggedrevs.php";
 }
 
-// Closed wiki for stews
-class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
-    public function testForAuthentication( array $reqs ) {
-        $username = \MediaWiki\Auth\AuthenticationRequest::getUsernameFromRequests( $reqs );
-        $user = User::newFromName( $username );
-        if ( $user->getId() ) { // User already exists, do not block authentication
-            return \StatusValue::newGood();
-        }
-        $central = CentralAuthUser::getInstance( $user );
-        $logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'authentication' );
-        if ( $central->hasGlobalPermission('createaccount') || $central->hasGlobalPermission('autocreateaccount') ) {
-            // User can autocreate account per global permissions
-	    $logger->info('Account autocreation granted at closed wiki for steward {name}', [
-	    	'name' => $username
-	    ]);
-            return \StatusValue::newGood();
-        }
-        $logger->error(
-            'Account autocreation denied for non-steward {name}', [
-                'name' => $username
-            ]
-        );
-        return \StatusValue::newFatal('authmanager-autocreate-noperm');
-    }
-}
-$wgAuthManagerAutoConfig['preauth'][\ClosedWikiProvider::class] = [
-    'class' => \ClosedWikiProvider::class,
-    'sort' => 0,
-];
-
 # Must be at the end
 $wgCdnServersNoPurge[] = '127.0.0.0/8';
 $wgEnableDnsBlacklist = true;
