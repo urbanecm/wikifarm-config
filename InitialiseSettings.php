@@ -124,7 +124,12 @@ $wgConf->settings = [
         'awiki' => [
             'global-renamer' => [
                 'centralauth-rename' => true,
+                'editrenamerprotected' => true,
             ]
         ]
+    ],
+    'wgRestrictionLevels' => [
+        'default' => [ '', 'autoconfirmed', 'sysop' ],
+        'awiki' => [ '', 'autoconfirmed', 'editrenamerprotected', 'sysop' ],
     ],
 ];
