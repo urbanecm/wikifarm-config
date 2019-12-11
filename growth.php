@@ -1,4 +1,5 @@
 <?php
+wfLoadExtension( 'PageViewInfo' );
 wfLoadExtension( 'GrowthExperiments' );
 // Welcome survey
 $wgWelcomeSurveyEnabled = true;
