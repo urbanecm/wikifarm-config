@@ -81,6 +81,7 @@ $wgGroupPermissions['oversight']['hideuser'] = true;
 
 // load skin
 wfLoadSkin( 'Vector' );
+wfLoadSkin( 'MinervaNeue' );
 
 // We're a family - CentralAuth
 wfLoadExtension( 'CentralAuth' );
@@ -114,6 +115,7 @@ $wgGlobalBlockingDatabase = "centralauth";
 wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Echo' );
+wfLoadExtension( 'MobileFrontend' );
 require "growth.php";
 
 // Per wiki extension stuff
