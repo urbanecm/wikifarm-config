@@ -116,6 +116,7 @@ $wgGlobalBlockingDatabase = "centralauth";
 wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Echo' );
+wfLoadExtension( 'OATHAuth' );
 wfLoadExtension( 'MobileFrontend' );
 require "growth.php";
 
