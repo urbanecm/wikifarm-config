@@ -78,6 +78,7 @@ $wgGroupPermissions['sysop']['deleterevision'] = true;
 $wgGroupPermissions['oversight']['suppressrevision'] = true;
 $wgGroupPermissions['oversight']['suppressionlog'] = true;
 $wgGroupPermissions['oversight']['hideuser'] = true;
+$wgAllowUserJs = true;
 
 // load skin
 wfLoadSkin( 'Vector' );
