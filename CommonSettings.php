@@ -113,6 +113,7 @@ foreach ( $groupOverrides as $group => $permissions ) {
 wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'GlobalBlocking' );
 $wgGlobalBlockingDatabase = "centralauth";
+$wgGlobalBlockingWikiAPI = 'http://a.wikifarm/mw/api.php';
 wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Echo' );
