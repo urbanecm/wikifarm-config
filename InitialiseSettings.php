@@ -132,4 +132,11 @@ $wgConf->settings = [
         'default' => [ '', 'autoconfirmed', 'sysop' ],
         'awiki' => [ '', 'autoconfirmed', 'editrenamerprotected', 'sysop' ],
     ],
+    'wgApplyGlobalBlocks' => [
+        'default' => true,
+        'awiki' => false,
+    ],
+    'wgMFAdvancedMobileContributions' => [
+        'default' => true,
+    ]
 ];
