@@ -123,6 +123,9 @@ $wgOATHAuthDatabase = "centralauth";
 wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'MobileFrontend' );
 require "growth.php";
+wfLoadExtension( 'VisualEditor' );
+wfLoadExtension( 'DiscussionTools' );
+$wgDiscussionToolsEnable = true;
 
 // Per wiki extension stuff
 if ( $wmgUseFlaggedRevs ) {
