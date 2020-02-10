@@ -79,6 +79,7 @@ $wgGroupPermissions['oversight']['suppressrevision'] = true;
 $wgGroupPermissions['oversight']['suppressionlog'] = true;
 $wgGroupPermissions['oversight']['hideuser'] = true;
 $wgAllowUserJs = true;
+$wgLocaltimezone = 'CET';
 
 // load skin
 wfLoadSkin( 'Vector' );
