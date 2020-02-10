@@ -119,6 +119,8 @@ wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'OATHAuth' );
+$wgOATHAuthDatabase = "centralauth";
+wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'MobileFrontend' );
 require "growth.php";
 
