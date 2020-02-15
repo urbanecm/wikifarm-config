@@ -12,16 +12,16 @@ $wgConf->settings = [
         'default' => '/wiki/$1',
     ],
     'wgServer' => [
-        'awiki' => 'http://a.wikifarm',
-        'bwiki' => 'http://b.wikifarm',
-        'cwiki' => 'http://c.wikifarm',
+        'awiki' => 'https://a.wikifarm',
+        'bwiki' => 'https://b.wikifarm',
+        'cwiki' => 'https://c.wikifarm',
         'flaggedrevswiki' => 'http://flaggedrevs.wikifarm',
         'commonswiki' => 'http://commons.wikifarm',
     ],
     'wgCanonicalServer' => [
-        'awiki' => 'http://a.wikifarm',
-        'bwiki' => 'http://b.wikifarm',
-        'cwiki' => 'http://c.wikifarm',
+        'awiki' => 'https://a.wikifarm',
+        'bwiki' => 'https://b.wikifarm',
+        'cwiki' => 'https://c.wikifarm',
         'flaggedrevswiki' => 'http://flaggedrevs.wikifarm',
         'commonswiki' => 'http://commons.wikifarm',
     ],
@@ -138,5 +138,24 @@ $wgConf->settings = [
     ],
     'wgMFAdvancedMobileContributions' => [
         'default' => true,
+    ],
+    'wmgUseTranslate' => [
+        'default' => false,
+    ],
+    'wgNoticeInfrastructure' => [
+        'default' => false,
+        'awiki' => true,
+    ],
+    'wgNoticeProject' => [
+        'default' => '$site'
+    ],
+    'wmgUseCentralNotice' => [
+        'default' => false,
+    ],
+    'wmgUseVisualEditor' => [
+        'default' => false
+    ],
+    'wmgUseDiscussionTools' => [
+        'default' => false,
     ]
 ];

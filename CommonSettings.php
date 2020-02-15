@@ -123,9 +123,46 @@ $wgOATHAuthDatabase = "centralauth";
 wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'MobileFrontend' );
 require "growth.php";
-wfLoadExtension( 'VisualEditor' );
-wfLoadExtension( 'DiscussionTools' );
-$wgDiscussionToolsEnable = true;
+
+if ( $wmgUseVisualEditor ) {
+    wfLoadExtension( 'VisualEditor' );
+}
+if ( $wmgUseDiscussionTools ) {
+    wfLoadExtension( 'DiscussionTools' );
+    $wgDiscussionToolsEnable = true;
+}
+
+if ( $wmgUseCentralNotice ) {
+    wfLoadExtension( 'CentralNotice' );
+    $wgCentralDBname = 'awiki';
+    $wgCentralHost = '//a.wikifarm';
+    $wgCentralSelectedBannerDispatcher = '//a.wikifarm/mw/index.php?title=Special:BannerLoader';
+    $wgCentralBannerRecorder = '//a.wikifarm/mw/index.php?title=Special:RecordImpression';
+    $wgNoticeUseTranslateExtension = true;
+    $wgNoticeProjects = ['wiki'];
+    $wgCentralNoticeMessageProtectRight = 'banner-protect';
+    $wgGroupPermissions['sysop']['banner-protect'] = true;
+    $wgGroupPermissions['translationadmin']['banner-protect'] = true;
+    $wgAvailableRights[] = 'banner-protect';
+}
+wfLoadExtension( 'MassMessage' );
+
+
+if ( $wmgUseTranslate ) {
+    wfLoadExtension( 'Translate' );
+    wfLoadExtension( 'UniversalLanguageSelector' );
+    $wgGroupPermissions['translationadmin']['pagetranslation'] = true;
+	$wgGroupPermissions['translationadmin']['translate-manage'] = true;
+	$wgGroupPermissions['translationadmin']['translate-import'] = true; // T42341
+	$wgGroupPermissions['translationadmin']['pagelang'] = true; // T153209
+	$wgGroupPermissions['user']['translate-messagereview'] = true;
+	$wgGroupPermissions['user']['translate-groupreview'] = true;
+	$wgGroupPermissions['sysop']['pagelang'] = true; // T153209
+	$wgAddGroups['bureaucrat'][] = 'translationadmin'; // T178793
+	$wgRemoveGroups['bureaucrat'][] = 'translationadmin'; // T178793
+	$wgGroupsAddToSelf['sysop'][] = 'translationadmin'; // T178793
+	$wgGroupsRemoveFromSelf['sysop'][] = 'translationadmin'; // T178793
+}
 
 // Per wiki extension stuff
 if ( $wmgUseFlaggedRevs ) {
