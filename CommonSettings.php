@@ -122,6 +122,7 @@ wfLoadExtension( 'OATHAuth' );
 $wgOATHAuthDatabase = "centralauth";
 wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'MobileFrontend' );
+wfLoadExtension( 'Interwiki' );
 require "growth.php";
 
 if ( $wmgUseVisualEditor ) {
@@ -145,7 +146,10 @@ if ( $wmgUseCentralNotice ) {
     $wgGroupPermissions['translationadmin']['banner-protect'] = true;
     $wgAvailableRights[] = 'banner-protect';
 }
-wfLoadExtension( 'MassMessage' );
+
+if ( $wmgUseMassMessage ) {
+    wfLoadExtension( 'MassMessage' );
+}
 
 
 if ( $wmgUseTranslate ) {

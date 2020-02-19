@@ -157,5 +157,15 @@ $wgConf->settings = [
     ],
     'wmgUseDiscussionTools' => [
         'default' => false,
+    ],
+    'wmgUseMassMessage' => [
+        'default' => true,
+    ],
+    'wgNamespacesToPostIn' => [
+        'default' => [ NS_PROJECT, NS_MAIN ]
+    ],
+    'wgMetaNamespace' => [
+        'default' => 'Project',
+        'bwiki' => 'Wikipedia'
     ]
 ];
