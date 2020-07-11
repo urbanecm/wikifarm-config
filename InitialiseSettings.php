@@ -61,9 +61,6 @@ $wgConf->settings = [
             ],
             // Sysadmin stuff for bureaucrats
             'bureaucrat' => [
-                'hideuser' => true,
-                'suppressionlog' => true,
-                'suppressrevision' => true,
                 'interwiki' => true,
                 'userrights' => true,
             ],
@@ -77,6 +74,12 @@ $wgConf->settings = [
                 'centralauth-unmerge' => true,
                 'globalblock' => true,
             ],
+            'ipblock-exempt' => [
+                'ipblock-exempt' => true
+            ],
+            'semitrusted' => [
+                'delete-move' => true,
+            ]
         ],
         // Read-only (except stewards)
         'closed' => [
@@ -167,5 +170,19 @@ $wgConf->settings = [
     'wgMetaNamespace' => [
         'default' => 'Project',
         'bwiki' => 'Wikipedia'
+    ],
+    'wmgUseDynamicPageList' =>[
+        'default' => false,
+        'bwiki' => true,
+    ],
+    'wmgUseWikiLove' => [
+        'default' => false,
+        'bwiki' => true
+    ],
+    'wgMainCacheType' => [
+        'default' => CACHE_DB
+    ],
+    'wmgUseOAuth' => [
+    	'default' => true
     ]
 ];

@@ -15,7 +15,8 @@ if ( defined( 'MW_DB' ) ) {
             $wmgServer = 'https://' . $matches[1] . '.ngrok.io';
     }
     else {
-        die( "Invalid host name, can't determine wiki name\n" );
+        //die( "Invalid host name, can't determine wiki name\n" );
+	$wikiname = 'a';
     }
     /*if ( $wikiname === "www" ) {
         // Optional: Override database name of your "main" wiki (otherwise "wwwwiki")
@@ -39,7 +40,7 @@ $wgConf->suffixes = [
 $dbList = 'all';
 $wgConf->wikis = DBLists::readDbListFile( $dbList );
 
-$wgLocalDatabases =& $wgConf->getLocalDatabases();
+$wgLocalDatabases = $wgConf->getLocalDatabases();
 require __DIR__ . "/InitialiseSettings.php";
 $confParams = [
     'lang'    => $lang,
@@ -55,7 +56,6 @@ foreach (['closed'] as $dblist) {
 }
 $globals = $wgConf->getAll( $wgDBname, "wiki", $confParams, $dblists );
 extract( $globals );
-$wgLocalDatabases =& $wgConf->getLocalDatabases();
 
 // Configure database
 $wgDBuser = "wikiuser";
@@ -75,9 +75,7 @@ $wgShowExceptionDetails = true;
 $wgDebugLogFile = "/var/www/wikis/logs/debug-{$wgDBname}.log";
 $wgGroupPermissions['sysop']['deletelogentry'] = true;
 $wgGroupPermissions['sysop']['deleterevision'] = true;
-$wgGroupPermissions['oversight']['suppressrevision'] = true;
-$wgGroupPermissions['oversight']['suppressionlog'] = true;
-$wgGroupPermissions['oversight']['hideuser'] = true;
+$wgGroupPermissions['sysop']['unblockself'] = false;
 $wgAllowUserJs = true;
 $wgLocaltimezone = 'CET';
 
@@ -117,12 +115,14 @@ $wgGlobalBlockingDatabase = "centralauth";
 $wgGlobalBlockingWikiAPI = 'http://a.wikifarm/mw/api.php';
 wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
+$wgCheckUserEnableSpecialInvestigate = true;
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'OATHAuth' );
 $wgOATHAuthDatabase = "centralauth";
 wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'MobileFrontend' );
 wfLoadExtension( 'Interwiki' );
+wfLoadExtension( 'UploadWizard' );
 require "growth.php";
 
 if ( $wmgUseVisualEditor ) {
@@ -151,6 +151,14 @@ if ( $wmgUseMassMessage ) {
     wfLoadExtension( 'MassMessage' );
 }
 
+if ( $wmgUseDynamicPageList ) {
+    wfLoadExtension( 'intersection' );
+}
+
+if ( $wmgUseWikiLove ) {
+    wfLoadExtension( 'WikiLove' );
+    $wgDefaultUserOptions['wikilove-enabled'] = 1;
+}
 
 if ( $wmgUseTranslate ) {
     wfLoadExtension( 'Translate' );
@@ -173,9 +181,16 @@ if ( $wmgUseFlaggedRevs ) {
     require "flaggedrevs.php";
 }
 
+if ( $wmgUseOAuth ) {
+	wfLoadExtension( 'OAuth' );
+	$wgMWOAuthCentralWiki = 'awiki';
+	$wgMWOAuthSharedUserSource = 'CentralAuth';
+}
+
 # Must be at the end
 $wgCdnServersNoPurge[] = '127.0.0.0/8';
 $wgEnableDnsBlacklist = true;
+$wgGroupPermissions['sysop']['blockemail'] = false;
 if ( isset($wmgServer) ) {
     $wgServer = $wmgServer; // Must be here, to override IS.php
 }
