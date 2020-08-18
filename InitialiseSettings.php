@@ -178,6 +178,6 @@ $wgConf->settings = [
         'default' => CACHE_DB
     ],
     'wmgUseOAuth' => [
-    	'default' => true
+    	'default' => false
     ]
 ];
