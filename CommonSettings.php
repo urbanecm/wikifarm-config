@@ -78,6 +78,7 @@ $wgGroupPermissions['sysop']['deleterevision'] = true;
 $wgGroupPermissions['sysop']['unblockself'] = false;
 $wgAllowUserJs = true;
 $wgLocaltimezone = 'CET';
+$wgMaxNameChars = 85;
 
 // load skin
 wfLoadSkin( 'Vector' );
