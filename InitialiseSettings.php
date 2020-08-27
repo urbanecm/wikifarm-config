@@ -72,9 +72,6 @@ $wgConf->settings = [
             'ipblock-exempt' => [
                 'ipblock-exempt' => true
             ],
-            'semitrusted' => [
-                'delete-move' => true,
-            ]
         ],
         // Read-only (except stewards)
         'closed' => [
