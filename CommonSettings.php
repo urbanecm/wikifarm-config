@@ -79,6 +79,9 @@ $wgGroupPermissions['sysop']['unblockself'] = false;
 $wgAllowUserJs = true;
 $wgLocaltimezone = 'CET';
 $wgMaxNameChars = 85;
+$wgJobRunRate = 0;
+$wgMainCacheType = CACHE_MEMCACHED;
+$wgMemCachedServers = [ '127.0.0.1:11211' ];
 
 // load skin
 wfLoadSkin( 'Vector' );
