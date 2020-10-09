@@ -127,6 +127,7 @@ $wgOATHAuthDatabase = "centralauth";
 wfLoadExtension( 'MobileFrontend' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'UploadWizard' );
+wfLoadExtension( 'SandboxLink' );
 require "growth.php";
 
 if ( $wmgUseVisualEditor ) {
