@@ -9,6 +9,7 @@ $wgGEHomepageNewAccountEnablePercentage = 100;
 $wgGEHomepageTutorialTitle = 'Tutorial'; // MediaWiki tutorial title
 $wgGEHomepageLoggingEnabled = false; // Disable event logging
 $wgGEHomepageMentorsList = 'Mentors'; // MediaWiki title with list of mentors
+$wgGEHomepageClaimMenteeAllowedList = 'Mentors/ClaimMentee';
 // Help panel
 $wgGEHelpPanelEnabled = true;
 $wgGEHelpPanelLoggingEnabled = false; // disable event logging
