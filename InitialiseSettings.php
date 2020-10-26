@@ -123,7 +123,10 @@ $wgConf->settings = [
             'global-renamer' => [
                 'centralauth-rename' => true,
                 'editrenamerprotected' => true,
-            ]
+            ],
+            'sysop' => [
+                'securepoll-create-poll' => true,
+            ],
         ]
     ],
     'wgRestrictionLevels' => [
@@ -172,12 +175,16 @@ $wgConf->settings = [
     ],
     'wmgUseWikiLove' => [
         'default' => false,
-        'bwiki' => true
+        'awiki' => true
     ],
     'wgMainCacheType' => [
         'default' => CACHE_DB
     ],
     'wmgUseOAuth' => [
     	'default' => false
-    ]
+    ],
+    'wmgUseSecurePoll' => [
+        'default' => false,
+        'awiki' => true,
+    ],
 ];

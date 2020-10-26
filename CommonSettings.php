@@ -85,6 +85,7 @@ $wgMemCachedServers = [ '127.0.0.1:11211' ];
 
 // load skin
 wfLoadSkin( 'Vector' );
+wfLoadSkin( 'MonoBook' );
 wfLoadSkin( 'MinervaNeue' );
 
 // We're a family - CentralAuth
@@ -129,6 +130,11 @@ wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'UploadWizard' );
 wfLoadExtension( 'SandboxLink' );
 require "growth.php";
+
+if ( $wmgUseSecurePoll ) {
+    wfLoadExtension( 'SecurePoll' );
+    $wgSecurePollUseNamespace = true;
+}
 
 if ( $wmgUseVisualEditor ) {
     wfLoadExtension( 'VisualEditor' );
