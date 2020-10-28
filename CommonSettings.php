@@ -129,6 +129,8 @@ wfLoadExtension( 'MobileFrontend' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'UploadWizard' );
 wfLoadExtension( 'SandboxLink' );
+wfLoadExtension( 'ParserFunctions' );
+wfLoadExtension( 'ConfirmEdit' );
 require "growth.php";
 
 if ( $wmgUseSecurePoll ) {

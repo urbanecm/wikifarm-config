@@ -187,4 +187,13 @@ $wgConf->settings = [
         'default' => false,
         'awiki' => true,
     ],
+    'wgImportSources' => [
+        'default' => ['cs']
+    ],
+    'wgUseInstantCommons' => [
+        'default' => true,
+    ],
+    'wgAutoConfirmAge' => [
+        'default' => 86400 * 4,
+    ],
 ];
