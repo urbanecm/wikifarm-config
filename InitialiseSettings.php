@@ -173,12 +173,12 @@ $wgConf->settings = [
         'default' => false,
         'bwiki' => true,
     ],
+    'wgDLPQueryCacheTime' => [
+        'default' => 20
+    ],
     'wmgUseWikiLove' => [
         'default' => false,
         'awiki' => true
-    ],
-    'wgMainCacheType' => [
-        'default' => CACHE_DB
     ],
     'wmgUseOAuth' => [
     	'default' => false
@@ -196,4 +196,7 @@ $wgConf->settings = [
     'wgAutoConfirmAge' => [
         'default' => 86400 * 4,
     ],
+    'wgAutoConfirmCount' => [
+        'default' => 1,
+    ]
 ];
