@@ -115,6 +115,7 @@ foreach ( $groupOverrides as $group => $permissions ) {
 
 // Extensions enabled on all wikis
 wfLoadExtension( 'SpamBlacklist' );
+wfLoadExtension( 'PageViewInfo' );
 wfLoadExtension( 'GlobalBlocking' );
 $wgGlobalBlockingDatabase = "centralauth";
 $wgGlobalBlockingWikiAPI = 'http://a.wikifarm/mw/api.php';

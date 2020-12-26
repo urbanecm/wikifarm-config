@@ -10,6 +10,9 @@ $wgGEHomepageTutorialTitle = 'Tutorial'; // MediaWiki tutorial title
 $wgGEHomepageLoggingEnabled = false; // Disable event logging
 $wgGEHomepageMentorsList = 'Mentors'; // MediaWiki title with list of mentors
 $wgGEHomepageClaimMenteeAllowedList = 'Mentors/ClaimMentee';
+$wgGENewcomerTasksRemoteApiUrl = 'https://cs.wikipedia.org/w/api.php';
+$wgGENewcomerTasksTopicType = 'ores';
+$wgGENewcomerTasksOresTopicConfigTitle = 'mw:MediaWiki:NewcomerTopicsOres.json';
 // Help panel
 $wgGEHelpPanelEnabled = true;
 $wgGEHelpPanelLoggingEnabled = false; // disable event logging
