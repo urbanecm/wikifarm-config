@@ -192,6 +192,8 @@ if ( $wmgUseTranslate ) {
 
 // Per wiki extension stuff
 if ( $wmgUseFlaggedRevs ) {
+    $wgAddGroups['bureaucrat'][] = 'sysop';
+    $wgRemoveGroups['bureaucrat'][] = 'bot';
     require "flaggedrevs.php";
 }
 
@@ -204,7 +206,7 @@ if ( $wmgUseOAuth ) {
 # Must be at the end
 $wgCdnServersNoPurge[] = '127.0.0.0/8';
 $wgEnableDnsBlacklist = true;
-$wgGroupPermissions['sysop']['blockemail'] = false;
 if ( isset($wmgServer) ) {
     $wgServer = $wmgServer; // Must be here, to override IS.php
 }
+$wgGroupPermissions['bureaucrat']['userrights'] = false;

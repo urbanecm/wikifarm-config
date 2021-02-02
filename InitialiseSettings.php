@@ -29,7 +29,7 @@ $wgConf->settings = [
     ],
     'wmgUseFlaggedRevs' => [
         'default' => false,
-        'flaggedrevswiki' => true,
+	'awiki' => true,
     ],
     'wgUseInstantCommons' => [
         'default' => true,

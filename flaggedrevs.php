@@ -52,7 +52,7 @@ $wgExtensionFunctions[] = function () {
 	///////////////////////////////////////
 	// Wiki-specific configurations
 	///////////////////////////////////////
-    if ( $wgDBname === "flaggedrevswiki" ) {
+    if ( $wgDBname === "awiki" ) {
         # same as dewiki
         $wgFlaggedRevsNamespaces[] = NS_CATEGORY;
         $wgFlaggedRevsTags['accuracy']['levels'] = 1;
