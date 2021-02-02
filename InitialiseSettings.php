@@ -29,7 +29,6 @@ $wgConf->settings = [
     ],
     'wmgUseFlaggedRevs' => [
         'default' => false,
-	'awiki' => true,
     ],
     'wgUseInstantCommons' => [
         'default' => true,
