@@ -71,8 +71,8 @@ $wgConf->settings = [
             'ipblock-exempt' => [
                 'ipblock-exempt' => true
             ],
-	    'test' => [
-	    	'read' => true
+            'test' => [
+                'read' => true
             ],
         ],
         // Read-only (except stewards)
