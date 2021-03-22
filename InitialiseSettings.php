@@ -74,6 +74,10 @@ $wgConf->settings = [
             'test' => [
                 'read' => true
             ],
+            'massmessage-sender' => [
+                'massmessage' => true,
+                'autopatrol' => true,
+            ],
         ],
         // Read-only (except stewards)
         'closed' => [

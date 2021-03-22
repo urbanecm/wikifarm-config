@@ -15,9 +15,11 @@ $wgGENewcomerTasksTopicType = 'ores';
 $wgGENewcomerTasksOresTopicConfigTitle = 'mw:MediaWiki:NewcomerTopicsOres.json';
 // Help panel
 $wgGEHelpPanelEnabled = true;
+$wgGEHelpPanelAskMentor = true;
 $wgGEHelpPanelLoggingEnabled = false; // disable event logging
 $wgGEHelpPanelNewAccountEnablePercentage = 100;
 $wgGEHelpPanelHelpDeskTitle = 'Help_Desk'; // MW title for the help desk
+//$wgGEHelpPanelHelpDeskTitle = null;
 $wgGEHelpPanelViewMoreTitle = 'Help'; // MW title for additional help links
 // List of links to help topics
 $wgGEHelpPanelLinks = [ 

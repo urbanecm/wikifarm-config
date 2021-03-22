@@ -131,8 +131,9 @@ wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'UploadWizard' );
 wfLoadExtension( 'SandboxLink' );
 wfLoadExtension( 'ParserFunctions' );
-wfLoadExtension( 'ConfirmEdit' );
+//wfLoadExtension( 'ConfirmEdit' );
 require "growth.php";
+require "ContactPages.php";
 
 if ( $wmgUseSecurePoll ) {
     wfLoadExtension( 'SecurePoll' );
@@ -210,3 +211,5 @@ if ( isset($wmgServer) ) {
     $wgServer = $wmgServer; // Must be here, to override IS.php
 }
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
+$wgGroupPermissions['user']['editcontentmodel'] = false;
+$wgGroupPermissions['sysop']['editcontentmodel'] = true;
