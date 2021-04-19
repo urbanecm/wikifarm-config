@@ -80,7 +80,7 @@ $wgAllowUserJs = true;
 $wgLocaltimezone = 'CET';
 $wgMaxNameChars = 85;
 $wgJobRunRate = 0;
-$wgMainCacheType = CACHE_MEMCACHED;
+$wgMainCacheType = CACHE_NONE;
 $wgMemCachedServers = [ '127.0.0.1:11211' ];
 
 // load skin
@@ -178,6 +178,11 @@ if ( $wmgUseWikiLove ) {
 if ( $wmgUseTranslate ) {
     wfLoadExtension( 'Translate' );
     wfLoadExtension( 'UniversalLanguageSelector' );
+    $wgPageLanguageUseDB = true;
+    $wgTranslateUsePreSaveTransform = true; // T39304
+
+    $wgEnablePageTranslation = true;
+    //$wgTranslateDelayedMessageIndexRebuild = true;
     $wgGroupPermissions['translationadmin']['pagetranslation'] = true;
 	$wgGroupPermissions['translationadmin']['translate-manage'] = true;
 	$wgGroupPermissions['translationadmin']['translate-import'] = true; // T42341
@@ -189,6 +194,29 @@ if ( $wmgUseTranslate ) {
 	$wgRemoveGroups['bureaucrat'][] = 'translationadmin'; // T178793
 	$wgGroupsAddToSelf['sysop'][] = 'translationadmin'; // T178793
 	$wgGroupsRemoveFromSelf['sysop'][] = 'translationadmin'; // T178793
+
+    $wgTranslateWorkflowStates = [
+		'progress' => [ 'color' => 'd33' ],
+		'needs-updating' => [ 'color' => 'fc3' ],
+		'proofreading' => [ 'color' => 'fc3' ],
+		'ready' => [ 'color' => 'FF0' ],
+		'published' => [ 'color' => 'AEA' ],
+		'state conditions' => [
+			[ 'ready', [ 'PROOFREAD' => 'MAX' ] ],
+			[ 'proofreading', [ 'TRANSLATED' => 'MAX' ] ],
+			[ 'progress', [ 'UNTRANSLATED' => 'NONZERO' ] ],
+		],
+	];
+    $wgTranslateDocumentationLanguageCode = 'qqq';
+    $wgTranslatePageTranslationULS = true;
+    $wgTranslateDelayedMessageIndexRebuild = true;
+    $wgTranslateStatsProviders = [
+        "edits" => "MediaWiki\Extension\Translate\Statistics\TranslatePerLanguageStats",
+        "users" => "MediaWiki\Extension\Translate\Statistics\TranslatePerLanguageStats",
+        "reviews" => "MediaWiki\Extension\Translate\Statistics\ReviewPerLanguageStats",
+        "reviewers" => "MediaWiki\Extension\Translate\Statistics\ReviewPerLanguageStats",
+        "registrations" => null,
+    ];
 }
 
 // Per wiki extension stuff

@@ -145,6 +145,7 @@ $wgConf->settings = [
     ],
     'wmgUseTranslate' => [
         'default' => false,
+	'awiki' => true,
     ],
     'wgNoticeInfrastructure' => [
         'default' => false,
