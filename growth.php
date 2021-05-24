@@ -1,5 +1,7 @@
 <?php
 wfLoadExtension( 'GrowthExperiments' );
+$wgGEDeveloperSetup = true;
+
 // Welcome survey
 $wgWelcomeSurveyEnabled = true;
 $wgWelcomeSurveyPrivacyPolicyUrl = 'https://martin.urbanec.cz';
@@ -9,6 +11,7 @@ $wgGEHomepageNewAccountEnablePercentage = 100;
 $wgGEHomepageTutorialTitle = 'Tutorial'; // MediaWiki tutorial title
 $wgGEHomepageLoggingEnabled = false; // Disable event logging
 $wgGEHomepageMentorsList = 'Mentors'; // MediaWiki title with list of mentors
+$wgGEHomepageManualAssignmentMentorsList = '';
 $wgGEHomepageClaimMenteeAllowedList = 'Mentors/ClaimMentee';
 $wgGENewcomerTasksRemoteApiUrl = 'https://cs.wikipedia.org/w/api.php';
 $wgGENewcomerTasksTopicType = 'ores';
