@@ -241,3 +241,6 @@ if ( isset($wmgServer) ) {
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgGroupPermissions['user']['editcontentmodel'] = false;
 $wgGroupPermissions['sysop']['editcontentmodel'] = true;
+
+$wgGECampaignPattern = '/^growth-advancement-test-2021$/';
+$wgLoginLanguageSelector = true;
