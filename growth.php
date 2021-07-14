@@ -37,3 +37,4 @@ $wgGEConfirmEmailEnabled = true;
 $wgGEOutreachDashboardCampaigns = [
     "https://outreachdashboard.wmflabs.org/campaigns/studenti/users.json"
 ];
+$wgGEMentorDashboardEnabled = true;
