@@ -12,14 +12,14 @@ $wgConf->settings = [
         'default' => '/wiki/$1',
     ],
     'wgServer' => [
-        'awiki' => 'http://a.wikifarm',
-        'bwiki' => 'http://b.wikifarm',
-        'cwiki' => 'http://c.wikifarm',
+        'awiki' => 'http://a.wikifarm.cz',
+        'bwiki' => 'http://b.wikifarm.cz',
+        'cwiki' => 'http://c.wikifarm.cz',
     ],
     'wgCanonicalServer' => [
-        'awiki' => 'http://a.wikifarm',
-        'bwiki' => 'http://b.wikifarm',
-        'cwiki' => 'http://c.wikifarm',
+        'awiki' => 'http://a.wikifarm.cz',
+        'bwiki' => 'http://b.wikifarm.cz',
+        'cwiki' => 'http://c.wikifarm.cz',
     ],
     'wgDefaultSkin' => [
         'default' => 'vector',
