@@ -80,6 +80,7 @@ $wgAllowUserJs = true;
 $wgLocaltimezone = 'CET';
 $wgMaxNameChars = 85;
 $wgJobRunRate = 0;
+$wgSessionCacheType = CACHE_DB;
 $wgMainCacheType = CACHE_NONE;
 $wgMemCachedServers = [ '127.0.0.1:11211' ];
 
