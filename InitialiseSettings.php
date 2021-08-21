@@ -78,6 +78,9 @@ $wgConf->settings = [
                 'massmessage' => true,
                 'autopatrol' => true,
             ],
+	    'electionadmin' => [
+	    	'editinterface' => true,
+	    ],
         ],
         // Read-only (except stewards)
         'closed' => [
