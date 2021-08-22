@@ -115,6 +115,7 @@ foreach ( $groupOverrides as $group => $permissions ) {
 }
 
 // Extensions enabled on all wikis
+wfLoadExtension( 'AntiSpoof' );
 wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'PageViewInfo' );
 wfLoadExtension( 'GlobalBlocking' );
