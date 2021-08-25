@@ -153,9 +153,9 @@ if ( $wmgUseDiscussionTools ) {
 if ( $wmgUseCentralNotice ) {
     wfLoadExtension( 'CentralNotice' );
     $wgCentralDBname = 'awiki';
-    $wgCentralHost = '//a.wikifarm';
-    $wgCentralSelectedBannerDispatcher = '//a.wikifarm/mw/index.php?title=Special:BannerLoader';
-    $wgCentralBannerRecorder = '//a.wikifarm/mw/index.php?title=Special:RecordImpression';
+    $wgCentralHost = '//a.wikifarm.cz';
+    $wgCentralSelectedBannerDispatcher = '//a.wikifarm.cz/mw/index.php?title=Special:BannerLoader';
+    $wgCentralBannerRecorder = '//a.wikifarm.cz/mw/index.php?title=Special:RecordImpression';
     $wgNoticeUseTranslateExtension = true;
     $wgNoticeProjects = ['wiki'];
     $wgCentralNoticeMessageProtectRight = 'banner-protect';
