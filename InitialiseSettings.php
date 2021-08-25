@@ -29,6 +29,10 @@ $wgConf->settings = [
     'wgLanguageCode' => [
         'default' => 'en',
     ],
+    'wmgUseCentralAuth' => [
+        'default' => true,
+        'fishbowl' => false,
+    ],
     'wmgUseFlaggedRevs' => [
         'default' => false,
     ],

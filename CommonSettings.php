@@ -48,7 +48,7 @@ $confParams = [
     'site'    => $site,
 ];
 $dblists = [];
-foreach (['closed'] as $dblist) {
+foreach (['closed', 'fishbowl'] as $dblist) {
     $wikis = DBLists::readDbListFile( $dblist );
     if ( in_array( $wgDBname, $wikis ) ) {
         $dblists[] = $dblist;
@@ -89,11 +89,13 @@ wfLoadSkin( 'Vector' );
 wfLoadSkin( 'MonoBook' );
 wfLoadSkin( 'MinervaNeue' );
 
-// We're a family - CentralAuth
-wfLoadExtension( 'CentralAuth' );
-$wgCentralAuthEnableGlobalRenameRequest = true;
-$wgGlobalRenameBlacklist = "https://a.wikifarm.cz/mw/index.php?title=Rename_blacklist&action=raw";
-$wgGlobalRenameBlacklistRegex = true;
+if ( $wmgUseCentralAuth ) {
+    // We're a family - CentralAuth
+    wfLoadExtension( 'CentralAuth' );
+    $wgCentralAuthEnableGlobalRenameRequest = true;
+    $wgGlobalRenameBlacklist = "https://a.wikifarm.cz/mw/index.php?title=Rename_blacklist&action=raw";
+    $wgGlobalRenameBlacklistRegex = true;
+}
 
 // Renameuser
 wfLoadExtension( 'Renameuser' );
