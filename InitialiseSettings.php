@@ -46,6 +46,7 @@ $wgConf->settings = [
     ],
     'wmgUseFlow' => [
         'default' => false,
+	'flowwiki' => true,
     ],
     'wgEnablePartialBlocks' => [
         'default' => false,
