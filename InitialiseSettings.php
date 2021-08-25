@@ -15,11 +15,13 @@ $wgConf->settings = [
         'awiki' => 'https://a.wikifarm.cz',
         'bwiki' => 'https://b.wikifarm.cz',
         'cwiki' => 'https://c.wikifarm.cz',
+        'flowwiki' => 'https://flow.wikifarm.cz',
     ],
     'wgCanonicalServer' => [
         'awiki' => 'https://a.wikifarm.cz',
         'bwiki' => 'https://b.wikifarm.cz',
         'cwiki' => 'https://c.wikifarm.cz',
+        'flowwiki' => 'https://flow.wikifarm.cz',
     ],
     'wgDefaultSkin' => [
         'default' => 'vector',
