@@ -81,7 +81,7 @@ $wgLocaltimezone = 'CET';
 $wgMaxNameChars = 85;
 $wgJobRunRate = 0;
 $wgSessionCacheType = CACHE_DB;
-$wgMainCacheType = CACHE_NONE;
+$wgMainCacheType = CACHE_MEMCACHED;
 $wgMemCachedServers = [ '127.0.0.1:11211' ];
 
 // load skin
@@ -133,7 +133,6 @@ wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'UploadWizard' );
 wfLoadExtension( 'SandboxLink' );
 wfLoadExtension( 'ParserFunctions' );
-//wfLoadExtension( 'ConfirmEdit' );
 require "growth.php";
 require "ContactPages.php";
 
@@ -151,6 +150,10 @@ if ( $wmgUseDiscussionTools ) {
 }
 if ( $wmgUseFlow ) {
     wfLoadExtension( 'Flow' );
+}
+if ( $wmgUseConfirmEdit ) {
+	wfLoadExtension( 'ConfirmEdit' );
+	$wgCaptchaClass = 'SimpleCaptcha';
 }
 
 if ( $wmgUseCentralNotice ) {

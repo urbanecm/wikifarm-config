@@ -48,6 +48,9 @@ $wgConf->settings = [
         'default' => false,
 	'flowwiki' => true,
     ],
+    'wmgUseConfirmEdit' => [
+        'default' => true,
+    ],
     'wgEnablePartialBlocks' => [
         'default' => false,
         'flaggedrevswiki' => true,
