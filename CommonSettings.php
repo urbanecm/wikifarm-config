@@ -157,6 +157,13 @@ if ( $wmgUseConfirmEdit ) {
 	wfLoadExtension( 'ConfirmEdit' );
 	$wgCaptchaClass = 'SimpleCaptcha';
 }
+if ( $wmgUseEventLogging ) {
+	wfLoadExtension( 'EventLogging' );
+
+	// per https://gerrit.wikimedia.org/g/mediawiki/extensions/EventLogging/+/54d0f7cb149c07fc3bda47efc0e708c01d6ca177/devserver/README.md
+	$wgEventLoggingServiceUri = 'http://localhost:8192/v1/events';
+	$wgEventLoggingStreamNames = false;
+}
 
 if ( $wmgUseCentralNotice ) {
     wfLoadExtension( 'CentralNotice' );

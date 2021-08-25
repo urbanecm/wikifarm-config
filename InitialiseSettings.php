@@ -55,6 +55,10 @@ $wgConf->settings = [
     'wmgUseConfirmEdit' => [
         'default' => true,
     ],
+    'wmgUseEventLogging' => [
+        'default' => false,
+	'awiki' => true,
+    ],
     'wgEnablePartialBlocks' => [
         'default' => false,
         'flaggedrevswiki' => true,
