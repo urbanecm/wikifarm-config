@@ -149,6 +149,9 @@ if ( $wmgUseDiscussionTools ) {
     wfLoadExtension( 'DiscussionTools' );
     $wgDiscussionToolsEnable = true;
 }
+if ( $wmgUseFlow ) {
+    wfLoadExtension( 'Flow' );
+}
 
 if ( $wmgUseCentralNotice ) {
     wfLoadExtension( 'CentralNotice' );

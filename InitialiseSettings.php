@@ -44,7 +44,9 @@ $wgConf->settings = [
     'wmgUseUploadWizard' => [
         'default' => false,
     ],
-
+    'wmgUseFlow' => [
+        'default' => false,
+    ],
     'wgEnablePartialBlocks' => [
         'default' => false,
         'flaggedrevswiki' => true,
