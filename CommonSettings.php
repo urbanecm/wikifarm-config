@@ -95,6 +95,18 @@ if ( $wmgUseCentralAuth ) {
     $wgCentralAuthEnableGlobalRenameRequest = true;
     $wgGlobalRenameBlacklist = "https://a.wikifarm.cz/mw/index.php?title=Rename_blacklist&action=raw";
     $wgGlobalRenameBlacklistRegex = true;
+
+    $wgSiteMatrixFishbowlSites = DBLists::readDbListFile( 'fishbowl' );
+    function wmgCentralAuthWikiList( &$list ) {
+        global $wgLocalDatabases, $wgSiteMatrixFishbowlSites;
+
+        $list = array_diff(
+            $wgLocalDatabases,
+            $wgSiteMatrixFishbowlSites
+        );
+        return false;
+    }
+    $wgHooks['CentralAuthWikiList'][] = 'wmgCentralAuthWikiList';
 }
 
 // Renameuser
