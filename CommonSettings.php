@@ -8,7 +8,7 @@ if ( defined( 'MW_DB' ) ) {
     $server = $_SERVER['SERVER_NAME'];
     if ( preg_match( '/^(.*)\.localhost$/', $server, $matches ) ) {
         $wikiname = $matches[1];
-    } elseif ( preg_match( '/^(.*)\.wikifarm$/', $server, $matches ) ) {
+    } elseif ( preg_match( '/^(.*)\.wikifarm(\.cz)?$/', $server, $matches ) ) {
             $wikiname = $matches[1];
     } elseif ( preg_match( '/^(.*)\.ngrok.io$/', $server, $matches ) ) {
             $wikiname = 'a';
