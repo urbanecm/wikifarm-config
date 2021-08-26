@@ -107,6 +107,14 @@ if ( $wmgUseCentralAuth ) {
         return false;
     }
     $wgHooks['CentralAuthWikiList'][] = 'wmgCentralAuthWikiList';
+
+    if ( $wmgLocalAuthLoginOnly ) {
+        // copied from WMF's MW config
+        // T57420: prevent creation of local password records for SUL users
+        if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
+            $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
+        }
+    }
 }
 
 // Renameuser

@@ -35,6 +35,9 @@ $wgConf->settings = [
         'default' => true,
         'fishbowl' => false,
     ],
+    'wmgLocalAuthLoginOnly' =>[
+        'default' => false,
+    ],
     'wmgUseFlaggedRevs' => [
         'default' => false,
     ],
