@@ -17,6 +17,7 @@ $wgConf->settings = [
         'cwiki' => 'https://c.wikifarm.cz',
         'flowwiki' => 'https://flow.wikifarm.cz',
         'foundationwiki' => 'https://foundation.wikifarm.cz',
+        'fishbowlwiki' => 'https://fishbowl.wikifarm.cz',
     ],
     'wgCanonicalServer' => [
         'awiki' => 'https://a.wikifarm.cz',
@@ -24,6 +25,7 @@ $wgConf->settings = [
         'cwiki' => 'https://c.wikifarm.cz',
         'flowwiki' => 'https://flow.wikifarm.cz',
         'foundationwiki' => 'https://foundation.wikifarm.cz',
+        'fishbowlwiki' => 'https://fishbowl.wikifarm.cz',
     ],
     'wgDefaultSkin' => [
         'default' => 'vector',
