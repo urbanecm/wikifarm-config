@@ -174,6 +174,7 @@ if ( $wmgUseEventLogging ) {
 
 	// per https://gerrit.wikimedia.org/g/mediawiki/extensions/EventLogging/+/54d0f7cb149c07fc3bda47efc0e708c01d6ca177/devserver/README.md
 	$wgEventLoggingServiceUri = 'http://localhost:8192/v1/events';
+	$wgEventLoggingQueueLingerSeconds = 1;
 	$wgEventLoggingStreamNames = false;
 }
 
