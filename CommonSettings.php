@@ -179,11 +179,29 @@ if ( $wmgUseConfirmEdit ) {
 }
 if ( $wmgUseEventLogging ) {
 	wfLoadExtension( 'EventLogging' );
+	wfLoadExtension( 'EventBus' );
+	wfLoadExtension( 'EventStreamConfig' );
+
+	// $wgEventLoggingBaseUri = 'http://localhost:8080/event';
 
 	// per https://gerrit.wikimedia.org/g/mediawiki/extensions/EventLogging/+/54d0f7cb149c07fc3bda47efc0e708c01d6ca177/devserver/README.md
 	$wgEventLoggingServiceUri = 'http://localhost:8192/v1/events';
 	$wgEventLoggingQueueLingerSeconds = 1;
 	$wgEventLoggingStreamNames = false;
+
+	$wgEnableEventBus = 'TYPE_EVENT';
+	$wgEventServices = [
+		'eventbus' => [
+			'url' => $wgEventLoggingServiceUri,
+		],
+		'eventgate-analytics-external' => [
+			'url' => $wgEventLoggingServiceUri,
+		],
+		'eventgate' => [
+			'url' => $wgEventLoggingServiceUri,
+		],
+	];
+	$wgEventGateServiceDefault = 'eventgate';
 }
 
 if ( $wmgUseCentralNotice ) {
