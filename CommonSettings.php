@@ -93,7 +93,7 @@ if ( $wmgUseCentralAuth ) {
     // We're a family - CentralAuth
     wfLoadExtension( 'CentralAuth' );
     $wgCentralAuthEnableGlobalRenameRequest = true;
-    $wgGlobalRenameBlacklist = "https://a.wikifarm.cz/mw/index.php?title=Rename_blacklist&action=raw";
+    $wgGlobalRenameBlacklist = "https://a.wikifarm.cz/w/index.php?title=Rename_blacklist&action=raw";
     $wgGlobalRenameBlacklistRegex = true;
 
     $wgSiteMatrixFishbowlSites = DBLists::readDbListFile( 'fishbowl' );
@@ -142,7 +142,7 @@ wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'PageViewInfo' );
 wfLoadExtension( 'GlobalBlocking' );
 $wgGlobalBlockingDatabase = "centralauth";
-$wgGlobalBlockingWikiAPI = 'http://a.wikifarm/mw/api.php';
+$wgGlobalBlockingWikiAPI = 'http://a.wikifarm/w/api.php';
 // wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
 $wgCheckUserEnableSpecialInvestigate = true;
@@ -208,8 +208,8 @@ if ( $wmgUseCentralNotice ) {
     wfLoadExtension( 'CentralNotice' );
     $wgCentralDBname = 'awiki';
     $wgCentralHost = '//a.wikifarm.cz';
-    $wgCentralSelectedBannerDispatcher = '//a.wikifarm.cz/mw/index.php?title=Special:BannerLoader';
-    $wgCentralBannerRecorder = '//a.wikifarm.cz/mw/index.php?title=Special:RecordImpression';
+    $wgCentralSelectedBannerDispatcher = '//a.wikifarm.cz/w/index.php?title=Special:BannerLoader';
+    $wgCentralBannerRecorder = '//a.wikifarm.cz/w/index.php?title=Special:RecordImpression';
     $wgNoticeUseTranslateExtension = true;
     $wgNoticeProjects = ['wiki'];
     $wgCentralNoticeMessageProtectRight = 'banner-protect';

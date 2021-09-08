@@ -6,7 +6,7 @@ $wgConf->settings = [
     // wgScriptPath and wgArticlePath are the same for all wikis, but they have to be here
     // because some things (e.g. WikiMap) retrieve these values from $wgConf
     'wgScriptPath' => [
-        'default' => '/mw',
+        'default' => '/w',
     ],
     'wgArticlePath' => [
         'default' => '/wiki/$1',
