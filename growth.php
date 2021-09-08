@@ -1,4 +1,8 @@
 <?php
+
+use GrowthExperiments\AqsEditInfoService;
+use MediaWiki\MediaWikiServices;
+
 wfLoadExtension( 'GrowthExperiments' );
 $wgGEDeveloperSetup = true;
 
@@ -44,3 +48,9 @@ $wgGENewcomerTasksConfigTitle = 'mw:Growth/Personalized_first_day/Newcomer_tasks
 # Search for tasks on en.wikipedia.org
 $wgGENewcomerTasksRemoteApiUrl = 'https://en.wikipedia.org/w/api.php';
 
+$wgGERestbaseUrl = 'https://en.wikipedia.org/api/rest_v1';
+$wgHooks['MediaWikiServices'][] = function ( MediaWikiServices $services ) {
+	$services->redefineService( 'GrowthExperimentsEditInfoService', function ( MediaWikiServices $services ) {
+		return new AqsEditInfoService( $services->getHttpRequestFactory(), 'en.wikipedia' );
+	} );
+};
