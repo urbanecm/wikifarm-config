@@ -38,3 +38,9 @@ $wgGEOutreachDashboardCampaigns = [
     "https://outreachdashboard.wmflabs.org/campaigns/studenti/users.json"
 ];
 $wgGEMentorDashboardEnabled = true;
+
+$wgGENewcomerTasksConfigTitle = 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/en.json';
+
+# Search for tasks on en.wikipedia.org
+$wgGENewcomerTasksRemoteApiUrl = 'https://en.wikipedia.org/w/api.php';
+

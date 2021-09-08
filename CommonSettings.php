@@ -72,7 +72,7 @@ $wgPasswordSender = "devwiki@martin.urbanec.cz";
 
 // Misc common things
 $wgShowExceptionDetails = true;
-$wgDebugLogFile = "/var/www/wikis/logs/debug-{$wgDBname}.log";
+//$wgDebugLogFile = "/var/www/wikis/logs/debug-{$wgDBname}.log";
 $wgGroupPermissions['sysop']['deletelogentry'] = true;
 $wgGroupPermissions['sysop']['deleterevision'] = true;
 $wgGroupPermissions['sysop']['unblockself'] = false;
@@ -143,7 +143,7 @@ wfLoadExtension( 'PageViewInfo' );
 wfLoadExtension( 'GlobalBlocking' );
 $wgGlobalBlockingDatabase = "centralauth";
 $wgGlobalBlockingWikiAPI = 'http://a.wikifarm/mw/api.php';
-wfLoadExtension( 'AbuseFilter' );
+// wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
 $wgCheckUserEnableSpecialInvestigate = true;
 wfLoadExtension( 'Echo' );
