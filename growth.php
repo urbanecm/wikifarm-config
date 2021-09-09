@@ -54,3 +54,8 @@ $wgHooks['MediaWikiServices'][] = function ( MediaWikiServices $services ) {
 		return new AqsEditInfoService( $services->getHttpRequestFactory(), 'en.wikipedia' );
 	} );
 };
+
+// link recommendation
+$wgGELinkRecommendationServiceWikiIdMasquerade = 'cswiki';
+$wgGELinkRecommendationServiceUrl = 'https://api.wikimedia.org/service/linkrecommendation';
+$wgGELinkRecommendationFallbackOnDBMiss = true;
