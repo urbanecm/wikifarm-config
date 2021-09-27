@@ -88,6 +88,7 @@ $wgMemCachedServers = [ '127.0.0.1:11211' ];
 wfLoadSkin( 'Vector' );
 wfLoadSkin( 'MonoBook' );
 wfLoadSkin( 'MinervaNeue' );
+wfLoadSkin( 'Timeless' );
 
 if ( $wmgUseCentralAuth ) {
     // We're a family - CentralAuth
@@ -155,6 +156,8 @@ wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'UploadWizard' );
 wfLoadExtension( 'SandboxLink' );
 wfLoadExtension( 'ParserFunctions' );
+wfLoadExtension( 'cldr' );
+wfLoadExtension( 'TorBlock' );
 require "growth.php";
 require "ContactPages.php";
 
