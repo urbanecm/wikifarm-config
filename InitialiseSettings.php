@@ -227,5 +227,9 @@ $wgConf->settings = [
     ],
     'wgAutoConfirmCount' => [
         'default' => 1,
-    ]
+    ],
+    'wmgUseWikiSEO' => [
+    	'default' => false,
+	'awiki' => true,
+    ],
 ];

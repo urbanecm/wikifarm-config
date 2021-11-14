@@ -291,6 +291,10 @@ if ( $wmgUseOAuth ) {
 	$wgMWOAuthSharedUserSource = 'CentralAuth';
 }
 
+if ( $wmgUseWikiSEO ) {
+	wfLoadExtension( 'WikiSEO' );
+}
+
 # Must be at the end
 $wgCdnServersNoPurge[] = '127.0.0.0/8';
 $wgEnableDnsBlacklist = true;
