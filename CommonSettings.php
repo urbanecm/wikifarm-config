@@ -72,7 +72,7 @@ $wgPasswordSender = "devwiki@martin.urbanec.cz";
 
 // Misc common things
 $wgShowExceptionDetails = true;
-//$wgDebugLogFile = "/var/www/wikis/logs/debug-{$wgDBname}.log";
+$wgDebugLogFile = "/var/www/wikis/logs/debug-{$wgDBname}.log";
 $wgGroupPermissions['sysop']['deletelogentry'] = true;
 $wgGroupPermissions['sysop']['deleterevision'] = true;
 $wgGroupPermissions['sysop']['unblockself'] = false;
@@ -143,7 +143,7 @@ wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'PageViewInfo' );
 wfLoadExtension( 'GlobalBlocking' );
 $wgGlobalBlockingDatabase = "centralauth";
-$wgGlobalBlockingWikiAPI = 'http://a.wikifarm/w/api.php';
+$wgGlobalBlockRemoteReasonUrl = 'https://a.wikifarm.cz/w/api.php';
 // wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
 $wgCheckUserEnableSpecialInvestigate = true;
@@ -293,6 +293,7 @@ if ( $wmgUseOAuth ) {
 
 if ( $wmgUseWikiSEO ) {
 	wfLoadExtension( 'WikiSEO' );
+	$wgWikiSeoEnableAutoDescription = true;
 }
 
 # Must be at the end
@@ -307,3 +308,4 @@ $wgGroupPermissions['sysop']['editcontentmodel'] = true;
 
 $wgGECampaignPattern = '/^growth-advancement-test-2021$/';
 $wgLoginLanguageSelector = true;
+$wgGroupPermissions['*']['applychangetags'] = true;

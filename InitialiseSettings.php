@@ -230,6 +230,5 @@ $wgConf->settings = [
     ],
     'wmgUseWikiSEO' => [
     	'default' => false,
-	'awiki' => true,
     ],
 ];
