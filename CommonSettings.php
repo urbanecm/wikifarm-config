@@ -159,6 +159,7 @@ wfLoadExtension( 'SandboxLink' );
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'cldr' );
 wfLoadExtension( 'TorBlock' );
+wfLoadExtension( 'TemplateStyles' );
 require "growth.php";
 require "ContactPages.php";
 
