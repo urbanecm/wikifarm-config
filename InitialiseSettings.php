@@ -18,6 +18,7 @@ $wgConf->settings = [
         'flowwiki' => 'https://flow.wikifarm.cz',
         'foundationwiki' => 'https://foundation.wikifarm.cz',
         'fishbowlwiki' => 'https://fishbowl.wikifarm.cz',
+	'translatablewiki' => 'https://translatable.wikifarm.cz',
     ],
     'wgCanonicalServer' => [
         'awiki' => 'https://a.wikifarm.cz',
@@ -26,6 +27,7 @@ $wgConf->settings = [
         'flowwiki' => 'https://flow.wikifarm.cz',
         'foundationwiki' => 'https://foundation.wikifarm.cz',
         'fishbowlwiki' => 'https://fishbowl.wikifarm.cz',
+	'translatablewiki' => 'https://translatable.wikifarm.cz',
     ],
     'wgDefaultSkin' => [
         'default' => 'vector',
@@ -171,6 +173,7 @@ $wgConf->settings = [
     ],
     'wmgUseTranslate' => [
         'default' => false,
+	'translatablewiki' => true,
     ],
     'wgNoticeInfrastructure' => [
         'default' => false,
