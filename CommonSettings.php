@@ -239,6 +239,7 @@ if ( $wmgUseWikiLove ) {
 
 if ( $wmgUseTranslate ) {
     wfLoadExtension( 'Translate' );
+    wfLoadExtension( 'TranslationNotifications' );
     wfLoadExtension( 'UniversalLanguageSelector' );
     $wgPageLanguageUseDB = true;
     $wgTranslateUsePreSaveTransform = true; // T39304
