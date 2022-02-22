@@ -99,6 +99,9 @@ $wgConf->settings = [
             'test' => [
                 'read' => true
             ],
+	    'test2' => [
+                'read' => true
+	    ],
             'massmessage-sender' => [
                 'massmessage' => true,
                 'autopatrol' => true,
