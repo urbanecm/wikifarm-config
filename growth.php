@@ -14,9 +14,6 @@ $wgGEHomepageEnabled = true;
 $wgGEHomepageNewAccountEnablePercentage = 100;
 $wgGEHomepageTutorialTitle = 'Tutorial'; // MediaWiki tutorial title
 $wgGEHomepageLoggingEnabled = false; // Disable event logging
-$wgGEHomepageMentorsList = 'Mentors'; // MediaWiki title with list of mentors
-$wgGEHomepageManualAssignmentMentorsList = '';
-$wgGEHomepageClaimMenteeAllowedList = 'Mentors/ClaimMentee';
 $wgGENewcomerTasksRemoteApiUrl = 'https://cs.wikipedia.org/w/api.php';
 $wgGENewcomerTasksTopicType = 'ores';
 $wgGENewcomerTasksOresTopicConfigTitle = 'mw:MediaWiki:NewcomerTopicsOres.json';
@@ -58,6 +55,3 @@ $wgHooks['MediaWikiServices'][] = function ( MediaWikiServices $services ) {
 $wgGELinkRecommendationServiceWikiIdMasquerade = 'cswiki';
 $wgGELinkRecommendationServiceUrl = 'https://api.wikimedia.org/service/linkrecommendation';
 $wgGELinkRecommendationFallbackOnDBMiss = true;
-
-// mentor dashboard
-$wgGEMentorDashboardDeploymentMode = 'alpha';
