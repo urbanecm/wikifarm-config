@@ -71,6 +71,7 @@ $wgEnotifUserTalk = true;
 $wgPasswordSender = "devwiki@martin.urbanec.cz";
 
 // Misc common things
+$wgEnableJavaScriptTest = true;
 $wgShowExceptionDetails = true;
 $wgDebugLogFile = "/var/www/wikis/logs/debug-{$wgDBname}.log";
 $wgGroupPermissions['sysop']['deletelogentry'] = true;
