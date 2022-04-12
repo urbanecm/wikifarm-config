@@ -5,7 +5,7 @@ if ( defined( 'MW_DB' ) ) {
     $wgDBname = MW_DB;
 } else {
     // Web server
-    $server = $_SERVER['SERVER_NAME'];
+    $server = $_SERVER['SERVER_NAME'] ?? 'a.wikifarm.cz';
     if ( preg_match( '/^(.*)\.localhost$/', $server, $matches ) ) {
         $wikiname = $matches[1];
     } elseif ( preg_match( '/^(.*)\.wikifarm(\.cz)?$/', $server, $matches ) ) {
