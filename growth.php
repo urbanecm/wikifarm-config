@@ -13,7 +13,6 @@ $wgWelcomeSurveyPrivacyPolicyUrl = 'https://martin.urbanec.cz';
 $wgGEHomepageEnabled = true;
 $wgGEHomepageNewAccountEnablePercentage = 100;
 $wgGEHomepageTutorialTitle = 'Tutorial'; // MediaWiki tutorial title
-$wgGEHomepageLoggingEnabled = false; // Disable event logging
 $wgGENewcomerTasksRemoteApiUrl = 'https://cs.wikipedia.org/w/api.php';
 $wgGENewcomerTasksTopicType = 'ores';
 $wgGENewcomerTasksOresTopicConfigTitle = 'mw:MediaWiki:NewcomerTopicsOres.json';
@@ -47,7 +46,7 @@ $wgGENewcomerTasksRemoteApiUrl = 'https://en.wikipedia.org/w/api.php';
 $wgGERestbaseUrl = 'https://en.wikipedia.org/api/rest_v1';
 $wgHooks['MediaWikiServices'][] = function ( MediaWikiServices $services ) {
 	$services->redefineService( 'GrowthExperimentsEditInfoService', function ( MediaWikiServices $services ) {
-		return new AqsEditInfoService( $services->getHttpRequestFactory(), 'en.wikipedia' );
+		return new AqsEditInfoService( $services->getHttpRequestFactory(), $services->getMainWANObjectCache(), 'en.wikipedia' );
 	} );
 };
 
