@@ -189,7 +189,7 @@ $wgConf->settings = [
         'default' => false,
     ],
     'wmgUseVisualEditor' => [
-        'default' => false
+        'default' => false,
     ],
     'wmgUseDiscussionTools' => [
         'default' => false,
