@@ -54,3 +54,6 @@ $wgHooks['MediaWikiServices'][] = function ( MediaWikiServices $services ) {
 $wgGELinkRecommendationServiceWikiIdMasquerade = 'cswiki';
 $wgGELinkRecommendationServiceUrl = 'https://api.wikimedia.org/service/linkrecommendation';
 $wgGELinkRecommendationFallbackOnDBMiss = true;
+
+// mentorship
+$wgGEMentorProvider = 'structured';
