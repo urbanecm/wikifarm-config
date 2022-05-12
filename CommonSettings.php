@@ -319,3 +319,5 @@ $wgGroupPermissions['sysop']['editcontentmodel'] = true;
 $wgGECampaignPattern = '/^growth-advancement-test-2021$/';
 $wgLoginLanguageSelector = true;
 $wgGroupPermissions['*']['applychangetags'] = true;
+
+$wgAccountCreationThrottle = 6;
