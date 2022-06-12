@@ -312,10 +312,3 @@ $wgEnableDnsBlacklist = true;
 if ( isset($wmgServer) ) {
     $wgServer = $wmgServer; // Must be here, to override IS.php
 }
-$wgGroupPermissions['bureaucrat']['userrights'] = false;
-$wgGroupPermissions['user']['editcontentmodel'] = false;
-$wgGroupPermissions['sysop']['editcontentmodel'] = true;
-
-$wgGECampaignPattern = '/^growth-advancement-test-2021$/';
-$wgLoginLanguageSelector = true;
-$wgGroupPermissions['*']['applychangetags'] = true;
