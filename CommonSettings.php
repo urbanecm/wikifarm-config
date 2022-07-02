@@ -154,6 +154,10 @@ $wgGlobalBlockRemoteReasonUrl = 'https://a.wikifarm.cz/w/api.php';
 // wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
 $wgCheckUserEnableSpecialInvestigate = true;
+$wgCheckUserCAMultiLock = [
+	'centralDB' => 'awiki',
+	'groups' => [ 'steward' ]
+];
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'OATHAuth' );
 $wgOATHAuthDatabase = "centralauth";
@@ -312,3 +316,6 @@ $wgEnableDnsBlacklist = true;
 if ( isset($wmgServer) ) {
     $wgServer = $wmgServer; // Must be here, to override IS.php
 }
+
+$wgRevokePermissions['nointerface']['editinterface'] = true;
+$wgNamespacesWithSubpages[NS_SPECIAL] = true;

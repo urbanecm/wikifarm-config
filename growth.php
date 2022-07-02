@@ -55,5 +55,12 @@ $wgGELinkRecommendationServiceWikiIdMasquerade = 'cswiki';
 $wgGELinkRecommendationServiceUrl = 'https://api.wikimedia.org/service/linkrecommendation';
 $wgGELinkRecommendationFallbackOnDBMiss = true;
 
+// image recommendation
+$wgGEImageRecommendationServiceUrl = 'https://image-suggestion-api.wmcloud.org';
+
 // mentorship
 $wgGEMentorProvider = 'structured';
+$wgGroupPermissions['*']['enrollasmentor'] = true;
+
+// test
+//$wgGEMentorDashboardUseVue = true;
