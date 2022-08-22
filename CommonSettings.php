@@ -151,13 +151,14 @@ wfLoadExtension( 'PageViewInfo' );
 wfLoadExtension( 'GlobalBlocking' );
 $wgGlobalBlockingDatabase = "centralauth";
 $wgGlobalBlockRemoteReasonUrl = 'https://a.wikifarm.cz/w/api.php';
-// wfLoadExtension( 'AbuseFilter' );
+wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'CheckUser' );
 $wgCheckUserEnableSpecialInvestigate = true;
 $wgCheckUserCAMultiLock = [
 	'centralDB' => 'awiki',
 	'groups' => [ 'steward' ]
 ];
+$wgCheckUserLogLogins = true;
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'OATHAuth' );
 $wgOATHAuthDatabase = "centralauth";

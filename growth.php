@@ -60,7 +60,4 @@ $wgGEImageRecommendationServiceUrl = 'https://image-suggestion-api.wmcloud.org';
 
 // mentorship
 $wgGEMentorProvider = 'structured';
-$wgGroupPermissions['*']['enrollasmentor'] = true;
-
-// test
-//$wgGEMentorDashboardUseVue = true;
+$wgGEMentorDashboardUseVue = true;

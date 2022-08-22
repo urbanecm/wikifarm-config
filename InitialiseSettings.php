@@ -66,7 +66,7 @@ $wgConf->settings = [
     ],
     'wmgUseEventLogging' => [
         'default' => false,
-	// 'awiki' => true,	
+	'awiki' => false,
     ],
     'wgEnablePartialBlocks' => [
         'default' => false,
@@ -190,7 +190,7 @@ $wgConf->settings = [
     ],
     'wmgUseVisualEditor' => [
         'default' => false,
-	'awiki' => true,
+	//'awiki' => true,
     ],
     'wmgUseDiscussionTools' => [
         'default' => false,
