@@ -317,6 +317,3 @@ $wgEnableDnsBlacklist = true;
 if ( isset($wmgServer) ) {
     $wgServer = $wmgServer; // Must be here, to override IS.php
 }
-
-$wgRevokePermissions['nointerface']['editinterface'] = true;
-$wgNamespacesWithSubpages[NS_SPECIAL] = true;
