@@ -2,8 +2,6 @@
 # NOTE: This file is based on file wmf-config/flaggedrevs.php,
 # residing in operations/mediawiki-config on Wikimedia Gerrit.
 
-include "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
-
 $wgFlaggedRevsAutopromote = false;
 
 $wgFlaggedRevsStatsAge = false;

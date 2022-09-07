@@ -296,6 +296,7 @@ if ( $wmgUseTranslate ) {
 
 // Per wiki extension stuff
 if ( $wmgUseFlaggedRevs ) {
+    wfLoadExtension( 'FlaggedRevs' );
     $wgAddGroups['bureaucrat'][] = 'sysop';
     $wgRemoveGroups['bureaucrat'][] = 'bot';
     require "flaggedrevs.php";

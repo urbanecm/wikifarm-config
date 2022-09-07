@@ -46,6 +46,7 @@ $wgConf->settings = [
     ],
     'wmgUseFlaggedRevs' => [
         'default' => false,
+        'flaggedrevswiki' => true,
     ],
     'wgUseInstantCommons' => [
         'default' => true,
