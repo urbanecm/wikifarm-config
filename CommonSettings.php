@@ -160,6 +160,7 @@ $wgCheckUserCAMultiLock = [
 ];
 $wgCheckUserLogLogins = true;
 wfLoadExtension( 'Echo' );
+wfLoadExtension( 'Thanks' );
 wfLoadExtension( 'OATHAuth' );
 $wgOATHAuthDatabase = "centralauth";
 //wfLoadExtension( 'WebAuthn' );
