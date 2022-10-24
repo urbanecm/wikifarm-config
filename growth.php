@@ -56,8 +56,13 @@ $wgGELinkRecommendationServiceUrl = 'https://api.wikimedia.org/service/linkrecom
 $wgGELinkRecommendationFallbackOnDBMiss = true;
 
 // image recommendation
-$wgGEImageRecommendationServiceUrl = 'https://image-suggestion-api.wmcloud.org';
+$wgGEImageRecommendationServiceUrl = 'https://image-suggestion.discovery.wmnet:30443';
+$wgGEImageRecommendationApiHandler = "production";
+$wgGEImageRecommendationServiceWikiIdMasquerade = 'cswiki';
 
 // mentorship
 $wgGEMentorProvider = 'structured';
 $wgGEMentorDashboardUseVue = true;
+
+// test
+$wgGEHomepageImpactModuleEnabled = false;
