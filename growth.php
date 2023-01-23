@@ -60,9 +60,10 @@ $wgGEImageRecommendationServiceUrl = 'https://image-suggestion.discovery.wmnet:3
 $wgGEImageRecommendationApiHandler = "production";
 $wgGEImageRecommendationServiceWikiIdMasquerade = 'cswiki';
 
+// new impact
+$wgGEUseNewImpactModule = true;
+$wgGERefreshUserImpactDataMaintenanceScriptEnabled = true;
+
 // mentorship
 $wgGEMentorProvider = 'structured';
 $wgGEMentorDashboardUseVue = true;
-
-// test
-$wgGEHomepageImpactModuleEnabled = false;
