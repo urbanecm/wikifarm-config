@@ -192,8 +192,7 @@ $wgConf->settings = [
         'default' => false,
     ],
     'wmgUseVisualEditor' => [
-        'default' => false,
-	//'awiki' => true,
+        'default' => true,
     ],
     'wmgUseDiscussionTools' => [
         'default' => false,
