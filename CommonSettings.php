@@ -182,7 +182,7 @@ if ( $wmgUseSecurePoll ) {
 
 if ( $wmgUseVisualEditor ) {
     wfLoadExtension( 'VisualEditor' );
-    wfLoadExtension( 'Parsoid', 'vendor/wikimedia/parsoid/extension.json' );
+    wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 }
 if ( $wmgUseDiscussionTools ) {
     wfLoadExtension( 'DiscussionTools' );
