@@ -195,7 +195,7 @@ $wgConf->settings = [
         'default' => true,
     ],
     'wmgUseDiscussionTools' => [
-        'default' => false,
+        'default' => true,
     ],
     'wmgUseMassMessage' => [
         'default' => true,

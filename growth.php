@@ -38,15 +38,16 @@ $wgGEOutreachDashboardCampaigns = [
     "https://outreachdashboard.wmflabs.org/campaigns/studenti/users.json"
 ];
 
-//$wgGENewcomerTasksConfigTitle = 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/en.json';
+$wgGENewcomerTasksConfigTitle = 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/en.json';
+$wgGENewcomerTasksConfigTitle = 'cs:MediaWiki:NewcomerTasks.json';
 
 # Search for tasks on en.wikipedia.org
-$wgGENewcomerTasksRemoteApiUrl = 'https://en.wikipedia.org/w/api.php';
+$wgGENewcomerTasksRemoteApiUrl = 'https://cs.wikipedia.org/w/api.php';
 
-$wgGERestbaseUrl = 'https://en.wikipedia.org/api/rest_v1';
+$wgGERestbaseUrl = 'https://cs.wikipedia.org/api/rest_v1';
 $wgHooks['MediaWikiServices'][] = function ( MediaWikiServices $services ) {
 	$services->redefineService( 'GrowthExperimentsEditInfoService', function ( MediaWikiServices $services ) {
-		return new AqsEditInfoService( $services->getHttpRequestFactory(), $services->getMainWANObjectCache(), 'en.wikipedia' );
+		return new AqsEditInfoService( $services->getHttpRequestFactory(), $services->getMainWANObjectCache(), 'cs.wikipedia' );
 	} );
 };
 
@@ -67,3 +68,4 @@ $wgGERefreshUserImpactDataMaintenanceScriptEnabled = true;
 // mentorship
 $wgGEMentorProvider = 'structured';
 $wgGEMentorDashboardUseVue = true;
+$wgGEPersonalizedPraiseBackendEnabled = true;

@@ -172,6 +172,7 @@ wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'cldr' );
 wfLoadExtension( 'TorBlock' );
 wfLoadExtension( 'TemplateStyles' );
+wfLoadExtension( 'Linter' );
 require "growth.php";
 require "ContactPages.php";
 
@@ -312,6 +313,8 @@ if ( $wmgUseWikiSEO ) {
 	wfLoadExtension( 'WikiSEO' );
 	$wgWikiSeoEnableAutoDescription = true;
 }
+
+$wgDefaultUserOptions['vector-limited-width'] = 0;
 
 # Must be at the end
 $wgCdnServersNoPurge[] = '127.0.0.0/8';
