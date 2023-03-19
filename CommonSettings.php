@@ -173,7 +173,6 @@ wfLoadExtension( 'cldr' );
 wfLoadExtension( 'TorBlock' );
 wfLoadExtension( 'TemplateStyles' );
 wfLoadExtension( 'Linter' );
-wfLoadExtension( 'WikimediaIncubator' );
 require "growth.php";
 require "ContactPages.php";
 
