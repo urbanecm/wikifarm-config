@@ -38,9 +38,6 @@ $wgGEOutreachDashboardCampaigns = [
     "https://outreachdashboard.wmflabs.org/campaigns/studenti/users.json"
 ];
 
-$wgGENewcomerTasksConfigTitle = 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/en.json';
-$wgGENewcomerTasksConfigTitle = 'cs:MediaWiki:NewcomerTasks.json';
-
 # Search for tasks on en.wikipedia.org
 $wgGENewcomerTasksRemoteApiUrl = 'https://cs.wikipedia.org/w/api.php';
 
