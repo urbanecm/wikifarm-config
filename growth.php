@@ -65,5 +65,3 @@ $wgGERefreshUserImpactDataMaintenanceScriptEnabled = true;
 // mentorship
 $wgGEMentorProvider = 'structured';
 $wgGEMentorDashboardUseVue = true;
-$wgGEPersonalizedPraiseEnabled = true;
-$wgGEPersonalizedPraiseBackendEnabled = true;
