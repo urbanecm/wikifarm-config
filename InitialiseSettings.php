@@ -62,6 +62,7 @@ $wgConf->settings = [
     ],
     'wmgUseFlow' => [
         'default' => false,
+	'awiki' => true,
 	'flowwiki' => true,
     ],
     'wmgUseConfirmEdit' => [
@@ -69,7 +70,6 @@ $wgConf->settings = [
     ],
     'wmgUseEventLogging' => [
         'default' => false,
-	'awiki' => false,
     ],
     'wgEnablePartialBlocks' => [
         'default' => false,

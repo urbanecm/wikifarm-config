@@ -316,6 +316,8 @@ if ( $wmgUseWikiSEO ) {
 
 $wgDefaultUserOptions['vector-limited-width'] = 0;
 
+$wgAutoCreateTempUser['enabled'] = true;
+
 # Must be at the end
 $wgCdnServersNoPurge[] = '127.0.0.0/8';
 $wgEnableDnsBlacklist = true;
